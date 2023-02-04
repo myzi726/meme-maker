@@ -1,3 +1,15 @@
+if(matchMedia("screen and (max-width: 767px)").matches){
+    console.log("mobile");
+  }else if(matchMedia("screen and (max-width: 1023px)").matches){
+    console.log("tablet");
+  }else if(matchMedia("screen and (min-width: 1024px)").matches){
+    console.log("desktop");
+  }
+  
+  window.onresize = function(){
+    document.location.reload();
+  };
+
 const fileInput = document.getElementById("file");
 const textInput = document.getElementById("text");
 const saveBtn = document.getElementById("save");
@@ -13,8 +25,8 @@ const lineWidth = document.getElementById("line-width");
 const canvas = document.querySelector("canvas");
 const ctx = canvas.getContext("2d");
 
-const CANVAS_WIDTH = 800;
-const CANVAS_HEIGHT = 800;
+const CANVAS_WIDTH = 600;
+const CANVAS_HEIGHT = 600;
 
 canvas.width = CANVAS_WIDTH;
 canvas.height = CANVAS_HEIGHT;
